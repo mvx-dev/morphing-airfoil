@@ -38,8 +38,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "height": 1.6,
+          "width": 1.6
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -446,13 +446,10 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": [
-      "New_Library",
-      "Custom_Footprints"
-    ]
+    "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "embedded-system.kicad_pro",
+    "filename": "embedded-pcb.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -598,8 +595,8 @@
       "version": 1
     },
     "net_format_name": "",
-    "page_layout_descr_file": "",
-    "plot_directory": "",
+    "page_layout_descr_file": "embedded-pcd",
+    "plot_directory": "./",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -612,7 +609,7 @@
   },
   "sheets": [
     [
-      "de6be016-d057-4e05-93ca-5815b4f6abac",
+      "59fd546b-6695-413e-ad86-d6d97541805c",
       "Root"
     ]
   ],

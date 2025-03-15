@@ -1822,7 +1822,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "custom-footprint:p103"
 			(at 115.57 73.66 0)
 			(effects
 				(font
@@ -2117,7 +2117,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "custom-footprint:p103"
 			(at 115.57 86.36 0)
 			(effects
 				(font
