@@ -196,6 +196,130 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R_Potentiometer"
 			(pin_names
 				(offset 1.016)
@@ -1316,6 +1440,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Rev 1"
+		(exclude_from_sim no)
+		(at 115.57 100.076 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9bfd3e02-b26d-4c91-804a-232163daaaa3")
+	)
 	(junction
 		(at 105.41 69.85)
 		(diameter 0)
@@ -1456,6 +1590,16 @@
 	)
 	(wire
 		(pts
+			(xy 64.77 109.22) (xy 82.55 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33807e4b-b7de-4a7f-9651-6833be3a3a47")
+	)
+	(wire
+		(pts
 			(xy 104.14 77.47) (xy 104.14 90.17)
 		)
 		(stroke
@@ -1546,6 +1690,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 95.25) (xy 104.14 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68258453-c44c-4ffa-9e66-8f9d7e544a0c")
+	)
+	(wire
+		(pts
 			(xy 104.14 90.17) (xy 115.57 90.17)
 		)
 		(stroke
@@ -1553,6 +1707,26 @@
 			(type default)
 		)
 		(uuid "7186df05-6f64-4177-bd6a-44af6346d04c")
+	)
+	(wire
+		(pts
+			(xy 90.17 109.22) (xy 96.52 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72da5f06-9976-4abb-9326-95c7d494543b")
+	)
+	(wire
+		(pts
+			(xy 66.04 99.06) (xy 82.55 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73365f23-5ec7-40ca-9787-d4d8485e23ca")
 	)
 	(wire
 		(pts
@@ -1573,16 +1747,6 @@
 			(type default)
 		)
 		(uuid "807b6fb7-6f08-45bc-8a8e-4fad0b1117c1")
-	)
-	(wire
-		(pts
-			(xy 66.04 99.06) (xy 96.52 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "95a07f86-d102-4bcb-9111-20128f9ed7af")
 	)
 	(wire
 		(pts
@@ -1626,16 +1790,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 109.22) (xy 96.52 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab1fcabf-f785-41dd-ae19-cf8de71623ab")
-	)
-	(wire
-		(pts
 			(xy 105.41 38.1) (xy 85.09 38.1)
 		)
 		(stroke
@@ -1673,6 +1827,16 @@
 			(type default)
 		)
 		(uuid "b8d2480e-c125-40c7-8aa9-b1945106eb2f")
+	)
+	(wire
+		(pts
+			(xy 90.17 99.06) (xy 96.52 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8e038a4-b900-4a48-a95c-963364bb6ef8")
 	)
 	(wire
 		(pts
@@ -1784,15 +1948,72 @@
 		)
 		(uuid "faff09f9-d211-4916-a81f-544c3ee36722")
 	)
-	(wire
-		(pts
-			(xy 104.14 95.25) (xy 82.55 95.25)
+	(symbol
+		(lib_id "Device:R")
+		(at 86.36 99.06 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "10301a67-0c22-4349-9fa7-de9c85996401")
+		(property "Reference" "R1"
+			(at 86.36 94.234 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(property "Value" "200"
+			(at 86.36 96.774 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(uuid "fe55df03-6136-4326-8d44-82d5df107fc5")
+		(property "Footprint" ""
+			(at 86.36 97.282 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 86.36 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 86.36 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "17461d18-df36-42af-8c1b-d585ebdadc51")
+		)
+		(pin "1"
+			(uuid "b2bc704e-18f8-4380-9b24-9f421cb7d346")
+		)
+		(instances
+			(project ""
+				(path "/de6be016-d057-4e05-93ca-5815b4f6abac"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer")
@@ -2157,6 +2378,73 @@
 			(project ""
 				(path "/de6be016-d057-4e05-93ca-5815b4f6abac"
 					(reference "RV2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 86.36 109.22 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cdcc45c1-951b-472b-ad92-3f4e61317ff5")
+		(property "Reference" "R2"
+			(at 86.36 104.902 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200"
+			(at 86.36 106.934 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 107.442 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 86.36 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 86.36 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7e24eb23-16a9-48fc-a260-a17470bf25ec")
+		)
+		(pin "2"
+			(uuid "bde59895-7738-4421-a346-f44ce1405254")
+		)
+		(instances
+			(project ""
+				(path "/de6be016-d057-4e05-93ca-5815b4f6abac"
+					(reference "R2")
 					(unit 1)
 				)
 			)
