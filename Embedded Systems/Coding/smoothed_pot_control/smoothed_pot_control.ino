@@ -1,3 +1,14 @@
+/*
+  smoothed_pot_control v1.0
+
+  Controls two servos by reading the voltage across two potentiometers, and
+  optionally smooth the outputs by calculating a sliding average.
+
+  created 03 Apr 2025
+  by Oskar Meszaros
+  zID z5636164
+  email o.meszaros@student.unsw.edu.au
+*/
 #include <Servo.h>
 
 /* Define I/O pins */
@@ -30,16 +41,14 @@ bool moving = false;
 const int smoothingSteps = 48;
 int pot1_readings[smoothingSteps] = {0};
 int pot2_readings[smoothingSteps] = {0};
-int pot1_running_total = 0;
-int pot2_running_total = 0;
 
-/* Translate potentiometer value to servo position */
 int pot_to_servo(int value) {
+  /* Translate potentiometer value to servo position */
   return (value/1023.0) * 180;
 }
 
 int smooth_value(int value, int readings[]) {
-  /* Remove the oldest reading, append new reading, and return average */
+  /* Update the reading buffer and return average */
   int total = 0;
   
   for (int i = 0; i < smoothingSteps-1; i++) {
@@ -53,13 +62,17 @@ int smooth_value(int value, int readings[]) {
   return (int)(total/smoothingSteps);
 }
 
-void calibrate(int cycles) {
+void calibrate(int cycles, int gap, int pot_pin, int readings[]) {
   /*
-  Propogates the buffer with values to prevent the servo moving prior to 
+  Propogates the buffer with values to prevent the servo moving prior to having the correction position.
+  Fills buffer cycles times.
   */
-  for (int i = 0; i < cycles; i++){
-    pot1_value = analogRead(POT1);
-    pot2_value = analogRead(POT2);
+  for (int cycle = 0; cycle < cycles; cycle++){
+    for (int i = 0; i < smoothingSteps; i++) {
+      int pot_value = analogRead(pot_pin);
+      smooth_value(pot_value, readings);
+      delay(gap);
+    }
   }
 }
 
@@ -74,11 +87,18 @@ void setup() {
   servo1.attach(SERVO1);
   servo2.attach(SERVO2);
 
+  /* Calibrate potentiometer smoothing */
+  digitalWrite(LEDPIN1, HIGH);
+  calibrate(8, 10, POT1, pot1_readings);
+  calibrate(8, 10, POT2, pot2_readings);
+  digitalWrite(LEDPIN1, LOW);
+
   /* Begin Serial */
   Serial.begin(9600);
 }
 
 void loop() {
+  /* Read all inputs */
   pot1_old = pot1_value;
   pot2_old = pot2_value;
   pot1_value = analogRead(POT1);
@@ -87,39 +107,45 @@ void loop() {
   switch1_value = digitalRead(SWITCH1);
   switch2_value = digitalRead(SWITCH2);
 
+  /* Smooth potentiometer input. Still add to buffer if not. */
   if (switch1_value == HIGH) {
     pot1_value = smooth_value(pot1_value, pot1_readings);
-  }
-  if (switch2_value == HIGH) {
-    pot2_value = smooth_value(pot2_value, pot2_readings);
+  } else {
+    smooth_value(pot1_value, pot1_readings);
   }
 
+  if (switch2_value == HIGH) {
+    pot2_value = smooth_value(pot2_value, pot2_readings);
+  } else {
+    smooth_value(pot2_value, pot2_readings);
+  }
+
+  /* Indicator light*/
   int delta1 = pot1_old - pot1_value;
   int delta2 = pot2_old - pot2_value;
 
   if ((delta1 < -threshold) or (delta1 > threshold)) {
     moving = true;
   }
-  if ((delta2 < -threshold) or (delta1 > threshold)) {
+  if ((delta2 < -threshold) or (delta2 > threshold)) {
     moving = true;
   }
 
   if (moving) {
     moving = false;
     digitalWrite(LEDPIN1, HIGH);
+    digitalWrite(LEDPIN2, LOW);
   } else {
     digitalWrite(LEDPIN1, LOW);
+    digitalWrite(LEDPIN2, HIGH);
   }
 
+  /* Update servos */
   servo1_pos = pot_to_servo(pot1_value);
   servo2_pos = pot_to_servo(pot2_value);
 
   servo1.write(servo1_pos);
   servo2.write(servo2_pos);
-
-  Serial.print(pot1_value);
-  Serial.print("\t");
-  Serial.println(pot2_value);
 
   delay(10);
 }
