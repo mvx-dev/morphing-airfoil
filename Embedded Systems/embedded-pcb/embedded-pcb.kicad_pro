@@ -485,7 +485,11 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
+<<<<<<< Updated upstream
       "plot": "./",
+=======
+      "plot": "Manufacturing/",
+>>>>>>> Stashed changes
       "pos_files": "",
       "specctra_dsn": "",
       "step": "embedded-pcb.step",

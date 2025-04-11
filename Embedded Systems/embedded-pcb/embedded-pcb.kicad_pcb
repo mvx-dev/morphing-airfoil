@@ -10,6 +10,7 @@
 	(title_block
 		(title "Morphing wing PCB")
 		(date "2025-04-10")
+<<<<<<< Updated upstream
 		(rev "v2.8")
 		(comment 1 "Email: o.meszaros@student.unsw.edu.au")
 		(comment 2 "zID: z5636164")
@@ -79,6 +80,7 @@
 			(sketchdnponfab yes)
 			(crossoutdnponfab yes)
 			(subtractmaskfromsilk yes)
+<<<<<<< Updated upstream
 			(outputformat 4)
 			(mirror no)
 			(drillshape 0)
@@ -5581,6 +5583,7 @@
 			(at 6.19 18.9 90)
 			(layer "F.SilkS")
 			(hide yes)
+<<<<<<< Updated upstream
 			(uuid "de1bbb29-7763-47fe-afa2-9cb3ee52e3e6")
 			(effects
 				(font
@@ -5592,6 +5595,7 @@
 		(property "Value" "Arduino_Nano_v2.x"
 			(at 8.89 19.05 90)
 			(layer "F.Fab")
+<<<<<<< Updated upstream
 			(uuid "032b3df8-c600-4ce8-a93d-a22a3ab20b37")
 			(effects
 				(font
@@ -5605,6 +5609,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
+<<<<<<< Updated upstream
 			(uuid "2933289e-247d-480e-8569-57572a540e60")
 			(effects
 				(font
@@ -5618,6 +5623,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
+<<<<<<< Updated upstream
 			(uuid "e773d01a-f3c7-4377-8827-7449357be0df")
 			(effects
 				(font
@@ -10158,6 +10164,7 @@
 		(property "Reference" "SW1"
 			(at 3.6 -2 0)
 			(layer "F.SilkS")
+<<<<<<< Updated upstream
 			(uuid "43270a5d-2c4a-458c-8214-4447dd50b3d5")
 			(effects
 				(font
@@ -10169,6 +10176,7 @@
 		(property "Value" "SW_SPDT"
 			(at 3.6 2 0)
 			(layer "F.Fab")
+<<<<<<< Updated upstream
 			(uuid "a4160e44-2633-4d3b-9914-bbee976fe0a6")
 			(effects
 				(font
@@ -10182,6 +10190,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
+<<<<<<< Updated upstream
 			(uuid "0ac01149-070b-4669-aed2-6aa10f2fc78f")
 			(effects
 				(font
@@ -10195,6 +10204,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
+<<<<<<< Updated upstream
 			(uuid "4f90a4c1-17ea-4da5-88d5-73eb3529879a")
 			(effects
 				(font
@@ -11539,6 +11549,7 @@
 		(width 1)
 		(layer "B.Cu")
 		(net 9)
+<<<<<<< Updated upstream
 		(uuid "010c9ac3-4352-4a70-8299-5826e8117af3")
 	)
 	(segment
@@ -11550,6 +11561,7 @@
 		(uuid "037da97b-f903-40c4-b964-8378ed4cb3ad")
 	)
 	(segment
+<<<<<<< Updated upstream
 		(start 124.75 85.75)
 		(end 128.961 89.961)
 		(width 1)
@@ -11718,12 +11730,30 @@
 		(uuid "68fa35f8-947c-41ea-9c92-10bde7e36be1")
 	)
 	(segment
+<<<<<<< Updated upstream
 		(start 158.75 71.64)
 		(end 154.55 71.64)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 9)
 		(uuid "82bb6920-b13b-4a82-bcd3-82f243a3d30f")
+=======
+	(segment
+		(start 158.75 71.64)
+		(end 154.55 71.64)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 9)
+		(uuid "82bb6920-b13b-4a82-bcd3-82f243a3d30f")
+	)
+	(segment
+		(start 124.75 85.75)
+		(end 127.46 88.46)
+		(width 1)
+		(layer "B.Cu")
+		(net 9)
+		(uuid "8efe093f-7106-4544-82be-210ada5487f3")
+>>>>>>> Stashed changes
 	)
 	(segment
 		(start 139.31 76.72)
@@ -11758,6 +11788,7 @@
 		(uuid "ad31eda6-570d-4259-b496-4105c075688b")
 	)
 	(segment
+<<<<<<< Updated upstream
 		(start 128.961 93.499)
 		(end 127.46 95)
 		(width 1)
@@ -11766,6 +11797,8 @@
 		(uuid "b00bbefa-1b59-4dd0-9d6e-8b2c8dd87378")
 	)
 	(segment
+=======
+>>>>>>> Stashed changes
 		(start 124.598443 48.62)
 		(end 125.699443 47.519)
 		(width 0.5)
@@ -11782,6 +11815,7 @@
 		(uuid "b73f0698-7bdd-4524-9026-921fbecb0e44")
 	)
 	(segment
+<<<<<<< Updated upstream
 		(start 128.961 89.961)
 		(end 128.961 93.499)
 		(width 1)
@@ -11790,6 +11824,8 @@
 		(uuid "b783e13e-4eb2-4623-8c60-2514a905cc60")
 	)
 	(segment
+=======
+>>>>>>> Stashed changes
 		(start 157.5 32.92)
 		(end 156.399 34.021)
 		(width 0.2)
@@ -11835,7 +11871,11 @@
 		(width 1)
 		(layer "B.Cu")
 		(net 9)
+<<<<<<< Updated upstream
 		(uuid "fe7395f6-fc24-490d-9e2a-49768cdcaadb")
+=======
+		(uuid "fdfe5851-8cb1-4d7e-a256-88516a383ea7")
+>>>>>>> Stashed changes
 	)
 	(segment
 		(start 162.25 81.8)
@@ -12684,6 +12724,7 @@
 		(layer "F.Cu")
 		(net 36)
 		(uuid "e9632b52-65b4-4e1d-9e88-b7890477be14")
+<<<<<<< Updated upstream
 	)
 	(segment
 		(start 127.46 104.75)
@@ -12692,6 +12733,8 @@
 		(layer "B.Cu")
 		(net 37)
 		(uuid "ac7575d7-4639-45a0-a286-2979c17355bc")
+=======
+>>>>>>> Stashed changes
 	)
 	(embedded_fonts no)
 )
