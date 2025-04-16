@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "0aa88cb1-19da-46e3-9c79-07c541405805")
+	(uuid "eff41b1a-a8e5-4bcd-8427-9f507149050f")
 	(paper "A4")
 	(title_block
 		(title "Power Management Circuit")
@@ -1884,7 +1884,4 @@
 			)
 		)
 	)
-	(uuid "eff41b1a-a8e5-4bcd-8427-9f507149050f")
-	(paper "A4")
-	(lib_symbols)
 )
