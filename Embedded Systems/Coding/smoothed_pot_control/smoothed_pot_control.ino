@@ -18,7 +18,7 @@ const int LEDPIN1 = 2; // LED1 in use
 const int LEDPIN2 = 3; // LED2 in use
 const int SWITCH2 = 4;
 const int SWITCH1 = 5;
-const int SERVO1 = 6;
+const int SERVO1 = 9;
 const int SERVO2 = 7;
 
 /* Define servos*/
@@ -91,6 +91,10 @@ void setup() {
   digitalWrite(LEDPIN1, HIGH);
   calibrate(8, 10, POT1, pot1_readings);
   calibrate(8, 10, POT2, pot2_readings);
+  digitalWrite(LEDPIN1, LOW);
+  delay(100);
+  digitalWrite(LEDPIN1, HIGH);
+  delay(100);
   digitalWrite(LEDPIN1, LOW);
 
   /* Begin Serial */
